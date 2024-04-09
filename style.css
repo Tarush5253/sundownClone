@@ -1,0 +1,191 @@
+@font-face {
+    font-family: yahuu;
+    src: url(./neue-haas-grotesk-display-pro-cufonfonts.zip);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: yahuu;
+    box-sizing: border-box;
+}
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    /* color:#e69627; */
+    position: relative;
+    padding: 0 2vw;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw 0;
+}
+nav #nav-part2{
+    display: flex;
+    align-items: center;
+    
+}
+nav #nav-part2 h4{
+    border: 1px solid #22212160 ;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+}
+nav #nav-part2 h4 a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color:  rgba(17, 17, 17, 0.897);
+    position: relative;
+    z-index: 9;
+}
+nav #nav-part2 h4:hover a{
+    /* color: #EFEAE3; */
+    color:#fff;
+}
+nav #nav-part2 h4::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    z-index: 0;
+}
+nav #nav-part2 h4:hover::after{
+    top:0;
+    border-radius: 0;
+}
+div#center{
+    display: flex;
+    height: 85vh;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid #0000003c;
+    padding-bottom: 4vw;
+    font-weight: 900;
+}
+#left h3{
+    width: 25vw;
+    font-size: 1.8vw;
+    line-height: 2vw;
+}
+#right h1{
+    font-size: 10vw;
+    line-height: 8vw;
+    text-align: right;
+}
+#page1 video{
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 60px;
+    position: relative;
+}
+#shape {
+    position: absolute;
+    height: 40vw;
+    width: 40vw;
+    right: 0px;
+    top: 87vh;
+}
+#page1 #shape div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#page1 #shape #shape_1{
+    border-top-left-radius:50%;
+    border-bottom-left-radius:50% ;
+    background-color: #FE4912;
+    filter: blur(15px);
+    animation: anime_1 2.5s linear 0s infinite alternate;
+}
+@keyframes anime_1 {
+    from{
+        transform: translateY(-2%);
+    }
+    to{
+        transform: translateY(2%);
+    }
+}
+
+#page1 #shape #shape_2{
+    border-radius: 50%;
+    filter: blur(20px);
+    background-color: #FE350C;
+    animation: anime_2 2.5s linear 0s infinite alternate;
+    /* right: 40px; */
+}
+@keyframes anime_2 {
+    from{
+        transform: translate(-8% , -8%);
+    }
+    to{
+        transform: translate(5%, 5%);
+    }
+}
+#page1 #shape #shape_3{
+    border-radius: 50%;
+    /* background-color: #FE350C; */
+    background: linear-gradient(#FE350C,#fe590c);
+    filter: blur(20px);
+    right: 15vw;
+    animation: anime 3s linear 0s infinite alternate;
+}
+@keyframes anime {
+    from{
+        transform: translate(-2%,-2%);
+    }
+    to{
+        transform: translate(10%,10%);
+    }
+}
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 8vw 0;
+}
+#moving-text{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation: move 10s linear 0s infinite ;
+}
+@keyframes move {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+}
+#moving-text h1{
+    font-size: 9vw;
+    display: inline-block;
+}
+.gola{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #FE350C;
+    display: inline-block;
+    margin: 1vw 2vw;
+}
